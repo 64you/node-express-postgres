@@ -4,7 +4,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: rgba(174, 230, 173, 0.264);">
     <%- include('./header'); %>
     <%- include('./error_messages'); %>
     <% if(isAuth) { %>
@@ -27,8 +27,8 @@
       </div>
       </div>
     <% } else { %>
-      <h1>Welcome to the TodoApp</h1>
-      <a class="btn btn-primary" href="/signup" role="button">Sign up now!</a>
+      <center><h1>Welcome to the TodoApp</h1></center>
+      <center><a class="btn btn-primary" href="/signup" role="button">まずは登録！</a></center>
     <% } %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

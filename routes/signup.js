@@ -17,6 +17,8 @@ router.post('/', function (req, res, next) {
   const username = req.body.username;
   const password = req.body.password;
   const repassword = req.body.repassword;
+  const mailaddress = req.body.mailaddress;
+  const remailaddress=req.body.remailaddress;
 
   knex("users")
     .where({name: username})
@@ -28,9 +30,9 @@ router.post('/', function (req, res, next) {
           errorMessage: ["このユーザ名は既に使われています"],
           isAuth: isAuth,
         }) 
-      } else if (password === repassword) {
+      } else if (password === repassword&&mailaddress==remailaddress) {
         knex("users")
-          .insert({name: username, password: password})
+          .insert({name: username, password: password,mailaddress: mailaddress})
           .then(function () {
             res.redirect("/");
           })

@@ -30,7 +30,8 @@ module.exports = {
     connection: {
       database: 'todo_app',
       user:     'root',
-      password: 'postgres'
+      password: 'postgres',
+      mailaddress: 'postgres'
     },
     pool: {
       min: 2,
@@ -50,7 +51,8 @@ module.exports = {
     connection: {
       database: 'todo_app',
       user:     'root',
-      password: 'postgres'
+      password: 'postgres',
+      mailaddress: 'postgres'
     },
     pool: {
       min: 2,
